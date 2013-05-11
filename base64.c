@@ -96,7 +96,7 @@ char
 *base64encode(UDF_INIT *initid, UDF_ARGS *args, char *result,
                unsigned long *ret_length, char *is_null, char *error)
 {
-  const unsigned char *current;
+  const char *current;
   unsigned long i = 0;
   unsigned long len;
 
@@ -193,7 +193,7 @@ char
 *base64decode(UDF_INIT *initid, UDF_ARGS *args, char *result,
                unsigned long *ret_length, char *is_null, char *error)
 {
-  const unsigned char *current;
+  const char *current;
   unsigned long i, j, k, ch;
   unsigned long len;
   static short reverse_table[256];
