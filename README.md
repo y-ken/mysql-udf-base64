@@ -1,8 +1,11 @@
-## MySQL UDF: base64encode / base64decode
+# MySQL User Defined Function (UDF)
+
+* base64encode
+* base64decode
 
 ## Summary
 
-It provides base64 encode/decode function for MySQL-5.1/5.5/5.6 as UDF.
+It provides base64 encode/decode function for MySQL-5.1/5.5/5.6 as UDF.  
 It has based on base64_encode/base64_decode of PHP implementation.
 
 ## Compatibility
