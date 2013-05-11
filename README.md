@@ -1,10 +1,22 @@
 ## MySQL UDF: base64encode / base64decode
 
+## Summary
+
+It provides base64 encode/decode function for MySQL-5.1/5.5/5.6 as UDF.
+It has based on base64_encode/base64_decode of PHP implementation.
+
+## Compatibility
+
+* MySQL-5.1
+* MySQL-5.5
+* MySQL-5.6
+
 ## Usage
 
 ```sql
 SELECT base64encode('data,binary,text,...');
 SELECT base64decode('b64strings');
+INSERT INTO t1 (body) VALUES (base64encode('something'));
 ```
 
 ## Installation
@@ -25,9 +37,17 @@ mysql> CREATE FUNCTION base64encode RETURNS STRING SONAME 'base64.so';
 mysql> CREATE FUNCTION base64decode RETURNS STRING SONAME 'base64.so';
 ```
 
+use it.
+
+```sql
+mysql> CREATE TABLE t1 (body text);
+mysql> INSERT INTO t1 (body) VALUES (base64encode('something'));
+mysql> SELECT body, base64decode(body) from t1;
+```
+
 ## Notes
 
-It is original README below.
+Below is the original README.
 
 ```
 this code based on PHP's base64.c
