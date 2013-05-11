@@ -61,14 +61,10 @@ takeshi@softagency.co.jp
 
 --- changelog
 2001-06-18
-
    * base64decode can handle LF,CR,'\'
-
   -- takeshi@softagency.co.jp 
 
 2001-06-15
-
    * init.
-
   -- takeshi@softagency.co.jp 
 ```
